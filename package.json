@@ -45,6 +45,7 @@
     "typescript": "4.6.3"
   },
   "lint-staged": {
-    "*.{ts,tsx,js}": "eslint --fix"
+    "*.{ts,tsx,js}": "eslint --fix",
+    "*.{scss,css,sass}": "pnpm lint:css"
   }
 }
