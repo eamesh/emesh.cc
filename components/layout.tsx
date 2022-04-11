@@ -34,7 +34,7 @@ export default function Layout({ children }: Props) {
       </div>
 
       <div className="bottom-credits fadeIn-element">
-        © All Rights Reserved.
+        © All Rights Reserved. 鲁ICP备19035880号-2
       </div>
     </>
   );

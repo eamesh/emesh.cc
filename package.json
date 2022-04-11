@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint --fix",
     "lint:css": "stylelint \"**/*.{css,scss,tsx}\" --fix",
+    "build:html": "next build && next export",
     "prepare": "husky install"
   },
   "dependencies": {
