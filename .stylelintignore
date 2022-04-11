@@ -1,0 +1,15 @@
+.husky
+.next
+.storybook
+
+node_modules
+
+public
+storybook-static
+utils
+
+next.config.js
+next-env.d.ts
+
+**/*.ts
+**/*.tsx
