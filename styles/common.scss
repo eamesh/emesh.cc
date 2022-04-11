@@ -1,0 +1,47 @@
+html,
+body,
+#__next {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+
+.bottom-credits {
+  position: absolute;
+  z-index: 1002;
+  bottom: 46px;
+  left: 51px;
+  display: block;
+  width: auto;
+  height: auto;
+  color: #fff;
+  font-size: 9px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-align: left;
+  text-size-adjust: 100%;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1200px) {
+  .bottom-credits {
+    bottom: 22px;
+    left: 26px;
+    font-size: 8px;
+  }
+}
+
+.bottom-credits a,
+.bottom-credits a:hover {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.bottom-credits.bottom-credits-dark,
+.bottom-credits.bottom-credits-dark a,
+.bottom-credits.bottom-credits-dark a:hover {
+  color: #000;
+}

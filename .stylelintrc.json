@@ -1,23 +1,39 @@
 {
     "extends": [
-        "stylelint-config-standard", 
-        "stylelint-config-idiomatic-order", 
+        "stylelint-config-standard",
+        "stylelint-config-idiomatic-order",
+        "stylelint-config-standard-scss",
         "stylelint-config-prettier"
     ],
+    "customSyntax": "postcss-scss",
     "rules": {
       "selector-class-pattern": null,
-      "at-rule-no-unknown": [
+      "selector-id-pattern": null,
+      "at-rule-no-unknown": null,
+      "indentation": 2,
+      "selector-pseudo-element-no-unknown": [
         true,
         {
-          "ignoreAtRules": [
-              "tailwind", 
-              "apply", 
-              "variants", 
-              "responsive", 
-              "screen"
-            ]
+          "ignorePseudoElements": [
+            "input-placeholder"
+          ]
+        }
+      ],
+      "scss/at-rule-no-unknown": null,
+      "number-leading-zero": "never",
+      "no-descending-specificity": null,
+      "font-family-no-missing-generic-family-keyword": null,
+      "selector-type-no-unknown": null,
+      "no-duplicate-selectors": null,
+      "no-empty-source":null,
+      "selector-pseudo-class-no-unknown": [
+        true,
+        {
+          "ignorePseudoClasses": [
+            "global",
+            "deep"
+          ]
         }
       ]
     }
   }
-  

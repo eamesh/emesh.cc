@@ -1,0 +1,317 @@
+.overlay::before,
+.overlay-video::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: "";
+}
+
+.overlay::before {
+  pointer-events: none;
+}
+
+.overlay-video::before {
+  pointer-events: auto;
+}
+
+.overlay-inverse-dark-35::before {
+  background: linear-gradient(to top, rgb(0 0 0 / 35%) 0%, rgb(0 0 0 / 10%) 100%);
+}
+
+.overlay-inverse-dark-70::before {
+  background: linear-gradient(to top, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 10%) 100%);
+}
+
+.overlay-dark-60::before {
+  background: rgb(0 0 0 / 60%);
+}
+
+.overlay-light-80::before {
+  background: rgb(255 255 255 / 80%);
+}
+
+.emesh-index {
+  .swiper-container-wrapper,
+  .swiper-container,
+  .swiper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .swiper-slide {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    float: left;
+  }
+
+  .swiper-slide-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #111;
+  }
+
+  .swiper-slide-inner-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    opacity: .2;
+    transform: scale(1.15);
+    transition: opacity .6s ease-in-out, transform 2s ease .7s;
+  }
+
+  .swiper-slide-duplicate-active .swiper-slide-inner-bg,
+  .swiper-slide-active .swiper-slide-inner-bg {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .swiper-slide-inner-txt {
+    position: absolute;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    width: 80% !important;
+    opacity: 0;
+    transition: opacity .4s ease;
+    user-select: none;
+  }
+
+  .swiper-slide-active .swiper-slide-inner-txt {
+    opacity: 1;
+    transition: opacity 1.8s ease 1.2s;
+  }
+
+  .bg-img-1 {
+    background-image: url("../../assets/img/background/hero-bg-1.jpeg");
+  }
+
+  .bg-img-2 {
+    background-image: url("../../assets/img/background/hero-bg-2.jpeg");
+  }
+
+  .bg-img-3 {
+    background-image: url("../../assets/img/background/hero-bg-3.jpeg");
+  }
+
+  .bg-img-4 {
+    background-image: url("../../assets/img/background/hero-bg-4.jpeg");
+  }
+
+  .hero-slider-bg-controls {
+    position: absolute;
+    z-index: 10;
+    right: 45px;
+    bottom: 105px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .hero-slider-bg-controls {
+      right: 20px;
+      bottom: 55px;
+    }
+  }
+
+  @media only screen and (max-width: 880px) {
+    .hero-slider-bg-controls {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .swiper-slide-controls {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 50px;
+    transition: all .4s ease-out;
+  }
+
+  .io-arrow-left,
+  .io-arrow-right {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-slide-controls.slide-prev,
+  .swiper-slide-controls.slide-next {
+    position: relative;
+    right: 0;
+    left: 0;
+    width: 50px !important;
+    margin-right: 6px;
+    margin-left: auto;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .swiper-slide-controls:hover {
+    background: #fff;
+    transition: all .4s ease-out;
+  }
+
+  @media only screen and (max-width: 880px) {
+    .swiper-slide-controls.slide-next {
+      margin-top: 10px;
+    }
+  }
+
+  .slider-progress-bar {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  .circle-svg {
+    position: relative;
+    transform: scale(1) rotate(-90deg);
+    transition: transform .4s ease;
+  }
+
+  .circle-svg circle,
+  .circle {
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 3;
+    stroke-width: 1px;
+  }
+
+  .slider-progress-bar.slider-active .circle {
+    stroke-dashoffset: 200px;
+    transition: linear 4s stroke-dashoffset;
+  }
+
+  .swiper-slide-controls-play-pause {
+    position: absolute;
+    z-index: 10;
+    right: 171px;
+    bottom: 105px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 50px;
+    transition: all .4s ease-out;
+  }
+
+  .swiper-slide-controls-play-pause,
+  .slider-on-off-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .swiper-slide-controls-play-pause {
+      right: 146px;
+      bottom: 55px;
+    }
+  }
+
+  @media only screen and (max-width: 880px) {
+    .swiper-slide-controls-play-pause {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .swiper-slide-controls-play-pause:hover {
+    background: none;
+    transition: all .4s ease-out;
+  }
+
+  .swiper-slide-controls-play-pause svg {
+    transition: all .4s ease-out;
+  }
+
+  .swiper-slide-controls-play-pause.slider-on-off i::before,
+  .slider-on-off-switch {
+    position: relative;
+    right: 0;
+    left: 0;
+    width: 50px !important;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.waves {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  max-height: 150px;
+  pointer-events: none;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}

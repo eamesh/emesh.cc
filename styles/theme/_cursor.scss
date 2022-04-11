@@ -1,0 +1,51 @@
+@mixin f-cursor($name, $scale : 1) {
+  &.cursor-#{$name} {
+    transform: scale($scale) translate(-50%, -50%);
+
+    .cursor-#{$name} {
+      span {
+        color: #000;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 76px;
+        mix-blend-mode: normal;
+        opacity: 1;
+        transition: opacity .35s ease .25s;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.cursor {
+  position: fixed;
+  z-index: 999999;
+  top: 50%;
+  left: 50%;
+  width: 76px;
+  height: 76px;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+  transform: scale(.3) translate(-50%, -50%);
+  transform-origin: left top;
+  transition: transform .35s;
+
+  @include f-cursor(view);
+  @include f-cursor(close);
+  @include f-cursor(link, 1.2);
+
+  .cursor-helper {
+    position: absolute;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+
+    span {
+      opacity: 0;
+      text-shadow: 20px 20px 20px #000;
+      visibility: hidden;
+    }
+  }
+}
