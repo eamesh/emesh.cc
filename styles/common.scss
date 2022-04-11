@@ -45,3 +45,15 @@ body,
 .bottom-credits.bottom-credits-dark a:hover {
   color: #000;
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(100%) scale(.4);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

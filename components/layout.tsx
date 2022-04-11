@@ -1,6 +1,7 @@
 import { ReactNode, useEffect } from 'react';
 import gsap from 'gsap';
 import Loader from './loader';
+import Head from 'next/head';
 
 type Props = {
   children: ReactNode
@@ -14,6 +15,12 @@ export default function Layout({ children }: Props) {
 
   return (
     <>
+      <Head>
+        <title>Hi! 我是太年轻</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"></meta>
+        <meta name="keywords" content="后端, 前端, PHP, TypeScript, Node.js, Webpack, React, Vue, Flutter"></meta>
+        <meta name="description" content="一只充满活力的80后."></meta>
+      </Head>
       <Loader />
       {children}
       <div className="cursor">

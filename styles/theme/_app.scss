@@ -94,25 +94,32 @@
     transition: opacity 1.8s ease 1.2s;
   }
 
-  .bg-img-1 {
-    background-image: url("../../assets/img/background/hero-bg-1.jpeg");
-  }
+  // .bg-img-1 {
+  //   background-image: url("../../assets/img/background/1.jpeg");
+  // }
 
-  .bg-img-2 {
-    background-image: url("../../assets/img/background/hero-bg-2.jpeg");
-  }
+  // .bg-img-2 {
+  //   background-image: url("../../assets/img/background/22.jpeg");
+  // }
 
-  .bg-img-3 {
-    background-image: url("../../assets/img/background/hero-bg-3.jpeg");
-  }
+  // .bg-img-3 {
+  //   background-image: url("../../assets/img/background/3.jpeg");
+  // }
 
-  .bg-img-4 {
-    background-image: url("../../assets/img/background/hero-bg-4.jpeg");
+  // .bg-img-4 {
+  //   background-image: url("../../assets/img/background/4.jpeg");
+  // }
+
+  @for $i from 1 through 8 {
+    .swiper-slide:nth-child(#{$i}) {
+      .swiper-slide-inner-bg {
+        background-image: url("../../assets/img/background/#{$i}.jpg");
+      }
+    }
   }
 
   .hero-slider-bg-controls {
     position: absolute;
-    z-index: 10;
     right: 45px;
     bottom: 105px;
   }
@@ -202,7 +209,6 @@
 
   .swiper-slide-controls-play-pause {
     position: absolute;
-    z-index: 10;
     right: 171px;
     bottom: 105px;
     width: 50px;
@@ -313,5 +319,25 @@ svg:not(:root) {
   .waves {
     height: 40px;
     min-height: 40px;
+  }
+}
+
+.text-animation {
+  display: block;
+  opacity: 0;
+  text-shadow: 0 0 .5rem rgb(0 0 0 / 80%);
+}
+
+.wechat-li {
+  .tooltip {
+    left: -100%;
+    opacity: 0;
+    transition: opacity .4s;
+  }
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+    }
   }
 }

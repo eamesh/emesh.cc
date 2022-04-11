@@ -26,6 +26,9 @@ export default function Loader () {
     const preloaderAfter = preLoader.querySelector('.preloader-after');
     const preloaderBefore = preLoader.querySelector('.preloader-before');
 
+    const textAnimation = document.querySelectorAll('.text-animation');
+
+
     const progressTimer = loaded(0, 100, 300, (val) => {
       progressNumber.innerText = val.toString();
       preloaderProgress.style.width = val + '%';
@@ -34,6 +37,7 @@ export default function Loader () {
     window.onload = () => {
       console.log('loaded');
       clearInterval(progressTimer);
+
       gsap.fromTo(preloaderProgress, { duration: 0.5, width: '95%' }, {
         width: '100%',
         onUpdate: () => {
@@ -55,8 +59,21 @@ export default function Loader () {
             delay: 0.7,
             onComplete: function () {
               preLoader.classList.add('hidden');
+              textAnimation.forEach(elm => {
+                gsap.fromTo(elm, {
+                  duration: 1,
+                  opacity: 0,
+                  delay: 10,
+                  transform: 'translateY(100%) scale(.4)',
+                }, {
+                  opacity: 1,
+                  transform: 'none'
+                });
+              });
             }
           });
+
+
         }
       });
     };
