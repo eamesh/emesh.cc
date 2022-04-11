@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --fix",
     "lint:css": "stylelint \"**/*.{css,scss,tsx}\" --fix"
   },
   "dependencies": {
@@ -22,6 +22,10 @@
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.4",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0-1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "14",
+    "eslint-plugin-promise": "^6.0.0",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "stylelint": "^14.6.1",
