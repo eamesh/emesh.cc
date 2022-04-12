@@ -86,7 +86,11 @@ export default function Loader () {
       <div className="preloader-block">
         <div className="title">Eamesh</div>
         <div className="percent">0</div>
-        <div className="loading">loading...</div>
+        <div className="loading">
+          <div className="spin-loader">
+            <span></span>
+          </div>
+        </div>
       </div>
       <div className="preloader-bar">
         <div className="preloader-progress"></div>
